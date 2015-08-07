@@ -1,0 +1,11 @@
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\bin\Debug\Mock.exe.config
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\bin\Debug\Bikes.mdf
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\bin\Debug\Bikes_log.ldf
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\bin\Debug\Mock.exe
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\bin\Debug\Mock.pdb
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\obj\Debug\Mock.csprojResolveAssemblyReference.cache
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\obj\Debug\Mock.Form1.resources
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\obj\Debug\Mock.Properties.Resources.resources
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\obj\Debug\Mock.csproj.GenerateResource.Cache
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\obj\Debug\Mock.exe
+C:\Users\blue7\Documents\Philip\Visual Studio 2013\Projects\Mock\Mock\obj\Debug\Mock.pdb
