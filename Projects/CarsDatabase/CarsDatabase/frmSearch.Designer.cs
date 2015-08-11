@@ -34,12 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.operatorComboBox = new System.Windows.Forms.ComboBox();
-            this.fieldComboBox = new System.Windows.Forms.ComboBox();
+            this.cboOperator = new System.Windows.Forms.ComboBox();
+            this.cboField = new System.Windows.Forms.ComboBox();
             this.tblCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hireDataSet = new CarsDatabase.HireDataSet();
-            this.runButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tblCarTableAdapter = new CarsDatabase.HireDataSetTableAdapters.tblCarTableAdapter();
             this.tableAdapterManager = new CarsDatabase.HireDataSetTableAdapters.TableAdapterManager();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -57,8 +57,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.operatorComboBox);
-            this.groupBox1.Controls.Add(this.fieldComboBox);
+            this.groupBox1.Controls.Add(this.cboOperator);
+            this.groupBox1.Controls.Add(this.cboField);
             this.groupBox1.Location = new System.Drawing.Point(72, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(484, 100);
@@ -100,24 +100,24 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Field";
             // 
-            // operatorComboBox
+            // cboOperator
             // 
-            this.operatorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.operatorComboBox.FormattingEnabled = true;
-            this.operatorComboBox.Location = new System.Drawing.Point(185, 55);
-            this.operatorComboBox.Name = "operatorComboBox";
-            this.operatorComboBox.Size = new System.Drawing.Size(121, 21);
-            this.operatorComboBox.TabIndex = 1;
+            this.cboOperator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboOperator.FormattingEnabled = true;
+            this.cboOperator.Location = new System.Drawing.Point(185, 55);
+            this.cboOperator.Name = "cboOperator";
+            this.cboOperator.Size = new System.Drawing.Size(121, 21);
+            this.cboOperator.TabIndex = 1;
             // 
-            // fieldComboBox
+            // cboField
             // 
-            this.fieldComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.fieldComboBox.FormattingEnabled = true;
-            this.fieldComboBox.Location = new System.Drawing.Point(25, 55);
-            this.fieldComboBox.Name = "fieldComboBox";
-            this.fieldComboBox.Size = new System.Drawing.Size(121, 21);
-            this.fieldComboBox.TabIndex = 0;
-            this.fieldComboBox.SelectedIndexChanged += new System.EventHandler(this.fieldComboBox_SelectedIndexChanged);
+            this.cboField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboField.FormattingEnabled = true;
+            this.cboField.Location = new System.Drawing.Point(25, 55);
+            this.cboField.Name = "cboField";
+            this.cboField.Size = new System.Drawing.Size(121, 21);
+            this.cboField.TabIndex = 0;
+            this.cboField.SelectedIndexChanged += new System.EventHandler(this.fieldComboBox_SelectedIndexChanged);
             // 
             // tblCarBindingSource
             // 
@@ -129,25 +129,25 @@
             this.hireDataSet.DataSetName = "HireDataSet";
             this.hireDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // runButton
+            // btnRun
             // 
-            this.runButton.Location = new System.Drawing.Point(577, 76);
-            this.runButton.Name = "runButton";
-            this.runButton.Size = new System.Drawing.Size(88, 36);
-            this.runButton.TabIndex = 2;
-            this.runButton.Text = "Run";
-            this.runButton.UseVisualStyleBackColor = true;
-            this.runButton.Click += new System.EventHandler(this.runButton_Click);
+            this.btnRun.Location = new System.Drawing.Point(577, 76);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(88, 36);
+            this.btnRun.TabIndex = 2;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.runButton_Click);
             // 
-            // closeButton
+            // btnClose
             // 
-            this.closeButton.Location = new System.Drawing.Point(577, 127);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(88, 36);
-            this.closeButton.TabIndex = 3;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.btnClose.Location = new System.Drawing.Point(577, 127);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(88, 36);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // tblCarTableAdapter
             // 
@@ -178,8 +178,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 476);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.runButton);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnRun);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmSearch";
             this.Text = "  Task A Search";
@@ -203,12 +203,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox operatorComboBox;
-        private System.Windows.Forms.ComboBox fieldComboBox;
+        private System.Windows.Forms.ComboBox cboOperator;
+        private System.Windows.Forms.ComboBox cboField;
         private System.Windows.Forms.TextBox valueTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button runButton;
-        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource tblCarBindingSource1;
     }

@@ -13,8 +13,8 @@ namespace CarsDatabase
 {
     public partial class frmSearch : Form
     {
-        // Connect to Database
-        SqlConnection vid = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\USERS\\BLUE7\\DOCUMENTS\\PHILIP\\VISUALSTUDIO2013\\PROJECTS\\CARSDATABASE\\CARSDATABASE\\BIN\\DEBUG\\HIRE.MDF;Integrated Security=True;Connect Timeout=30");
+
+        SqlConnection vid;
 
         // Create Form
         public frmSearch()
@@ -36,51 +36,18 @@ namespace CarsDatabase
         {
             // TODO: This line of code loads data into the 'hireDataSet.tblCar' table. You can move, or remove it, as needed.
             this.tblCarTableAdapter.Fill(this.hireDataSet.tblCar);
-            this.fieldComboBox.Items.AddRange(new object[] {
-                "VehicleRegNo",
+            this.cboField.Items.AddRange(new object[] {
                 "Make",
                 "EngineSize",
-                "DateRegistered",
                 "RentalPerDay",
                 "Available"});
 
-            
-
-            fieldComboBox.SelectedIndex = 0;
-            operatorComboBox.SelectedIndex = 0;
-            
-            
-            SqlCommand cmd = new SqlCommand();
-            Object returnValue;
-
-            cmd.CommandText = "Select TOP 1" + fieldComboBox.Text + " from tblCar";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = vid;
-
-            try
-            {
-
-                vid.Open();
-
-                returnValue = cmd.ExecuteScalar();
-                valueTextBox.Text = returnValue.ToString();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            finally
-            {
-                vid.Close();
-            }
-
-            
-            loadDataSet();
-
-            
-            
+            this.cboOperator.Items.AddRange(new object[] {
+                "=",
+                ">",
+                ">=",
+                "<",
+                "<="});
 
         }
 
@@ -108,38 +75,28 @@ namespace CarsDatabase
             loadDataSet();
         }
 
+        // unused
         private void fieldComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (fieldComboBox.Text == "VehicleRegNo" || fieldComboBox.Text == "Make" || fieldComboBox.Text == "Available")
-            {
-                // Clear combo box
-                this.operatorComboBox.Items.Clear();
-
-                // populate with symbols
-                this.operatorComboBox.Items.AddRange(new object[] {
-                "="
-                });
-            } else if (fieldComboBox.Text == "EngineSize" || fieldComboBox.Text == "DateRegistered" || fieldComboBox.Text == "RentalPerDay")
-            {
-                // clear combo box
-                this.operatorComboBox.Items.Clear();
-
-                // populate with symbols
-                this.operatorComboBox.Items.AddRange(new object[] {
-                "=",
-                ">",
-                ">=",
-                "<",
-                "<="});
-            }
+            
         }
 
         // load information into data grid view
         private void loadDataSet()
         {
-            String field = fieldComboBox.Text;
-            String op = operatorComboBox.Text;
+            String field = cboField.Text;
+            String op = cboOperator.Text;
             String value = valueTextBox.Text;
+
+            try
+            {
+                // Connect to Database
+                vid = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\USERS\\BLUE7\\DOCUMENTS\\PHILIP\\VISUALSTUDIO2013\\PROJECTS\\CARSDATABASE\\CARSDATABASE\\BIN\\DEBUG\\HIRE.MDF;Integrated Security=True;Connect Timeout=30");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             // check if blank
             if (field != "" && op != "" && value != "")
