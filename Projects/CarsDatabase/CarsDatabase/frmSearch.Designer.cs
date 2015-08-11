@@ -59,9 +59,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cboOperator);
             this.groupBox1.Controls.Add(this.cboField);
-            this.groupBox1.Location = new System.Drawing.Point(72, 63);
+            this.groupBox1.Location = new System.Drawing.Point(59, 77);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(484, 100);
+            this.groupBox1.Size = new System.Drawing.Size(500, 116);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -89,7 +89,6 @@
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Operator";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -117,7 +116,6 @@
             this.cboField.Name = "cboField";
             this.cboField.Size = new System.Drawing.Size(121, 21);
             this.cboField.TabIndex = 0;
-            this.cboField.SelectedIndexChanged += new System.EventHandler(this.fieldComboBox_SelectedIndexChanged);
             // 
             // tblCarBindingSource
             // 
@@ -131,7 +129,7 @@
             // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(577, 76);
+            this.btnRun.Location = new System.Drawing.Point(613, 90);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(88, 36);
             this.btnRun.TabIndex = 2;
@@ -141,7 +139,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(577, 127);
+            this.btnClose.Location = new System.Drawing.Point(613, 141);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(88, 36);
             this.btnClose.TabIndex = 3;
@@ -162,9 +160,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(72, 264);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 259);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(585, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(642, 150);
             this.dataGridView1.TabIndex = 4;
             // 
             // tblCarBindingSource1
@@ -176,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 476);
+            this.ClientSize = new System.Drawing.Size(761, 476);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRun);

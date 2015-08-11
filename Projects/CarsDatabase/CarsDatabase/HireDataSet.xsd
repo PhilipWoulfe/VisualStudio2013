@@ -74,7 +74,7 @@ SELECT VehicleRegNo, Make, EngineSize, DateRegistered, RentalPerDay, Available F
               <Mapping SourceColumn="Available" DataSetColumn="Available" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="HireConnectionString (Settings)" DbObjectName="[C:\USERS\BLUE7\DOCUMENTS\PHILIP\VISUALSTUDIO2013\PROJECTS\CARSDATABASE\CARSDATABASE\HIRE.MDF].dbo.SelectQuery" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBymAKEeQpRO" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBymAKEeQpRO" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBymAKEeQpRO">
+              <DbSource ConnectionRef="HireConnectionString (Settings)" DbObjectName="[C:\USERS\BLUE7\DOCUMENTS\PHILIP\VISUALSTUDIO2013\PROJECTS\CARSDATABASE\CARSDATABASE\HIRE.MDF].dbo.SelectQuery" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBymAKEeQpRO" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBymAKEeQpRO" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBymAKEeQpRO">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SelectQuery</CommandText>
@@ -85,7 +85,7 @@ SELECT VehicleRegNo, Make, EngineSize, DateRegistered, RentalPerDay, Available F
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="HireConnectionString (Settings)" DbObjectName="dbo.tblCar" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByMakeEqual" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByMakeEqual" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByMakeEqual">
+              <DbSource ConnectionRef="HireConnectionString (Settings)" DbObjectName="dbo.tblCar" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByMakeEqual" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByMakeEqual" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByMakeEqual">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        VehicleRegNo, Make, EngineSize, DateRegistered, RentalPerDay, Available
@@ -108,7 +108,7 @@ WHERE        (Make = @one)
   <xs:element name="HireDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HireDataSet" msprop:Generator_UserDSName="HireDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblCar" msprop:Generator_TableClassName="tblCarDataTable" msprop:Generator_TableVarName="tabletblCar" msprop:Generator_TablePropName="tblCar" msprop:Generator_RowDeletingName="tblCarRowDeleting" msprop:Generator_RowChangingName="tblCarRowChanging" msprop:Generator_RowEvHandlerName="tblCarRowChangeEventHandler" msprop:Generator_RowDeletedName="tblCarRowDeleted" msprop:Generator_UserTableName="tblCar" msprop:Generator_RowChangedName="tblCarRowChanged" msprop:Generator_RowEvArgName="tblCarRowChangeEvent" msprop:Generator_RowClassName="tblCarRow">
+        <xs:element name="tblCar" msprop:Generator_TableClassName="tblCarDataTable" msprop:Generator_TableVarName="tabletblCar" msprop:Generator_RowChangedName="tblCarRowChanged" msprop:Generator_TablePropName="tblCar" msprop:Generator_RowDeletingName="tblCarRowDeleting" msprop:Generator_RowChangingName="tblCarRowChanging" msprop:Generator_RowEvHandlerName="tblCarRowChangeEventHandler" msprop:Generator_RowDeletedName="tblCarRowDeleted" msprop:Generator_RowClassName="tblCarRow" msprop:Generator_UserTableName="tblCar" msprop:Generator_RowEvArgName="tblCarRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="VehicleRegNo" msprop:Generator_ColumnVarNameInTable="columnVehicleRegNo" msprop:Generator_ColumnPropNameInRow="VehicleRegNo" msprop:Generator_ColumnPropNameInTable="VehicleRegNoColumn" msprop:Generator_UserColumnName="VehicleRegNo">

@@ -164,7 +164,7 @@
             this.updateButton.TabStop = false;
             this.updateButton.Text = "&Update";
             this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.tblCarBindingNavigatorSaveItem_Click);
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // addButton
             // 
@@ -175,7 +175,7 @@
             this.addButton.TabStop = false;
             this.addButton.Text = "&Add";
             this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -186,7 +186,7 @@
             this.deleteButton.TabStop = false;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // searchButton
             // 
@@ -197,7 +197,7 @@
             this.searchButton.TabStop = false;
             this.searchButton.Text = "&Search";
             this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.button4_Click);
+            this.searchButton.Click += new System.EventHandler(this.search_Click);
             // 
             // CancelButton
             // 
@@ -208,7 +208,7 @@
             this.CancelButton.TabStop = false;
             this.CancelButton.Text = "&Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // ExitButton
             // 
@@ -219,7 +219,7 @@
             this.ExitButton.TabStop = false;
             this.ExitButton.Text = "E&xit";
             this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.ExitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // firstButton
             // 
@@ -230,7 +230,7 @@
             this.firstButton.TabStop = false;
             this.firstButton.Text = "First";
             this.firstButton.UseVisualStyleBackColor = true;
-            this.firstButton.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
+            this.firstButton.Click += new System.EventHandler(this.firstButton_Click);
             // 
             // recordTextBox
             // 
@@ -242,7 +242,6 @@
             this.recordTextBox.TabIndex = 21;
             this.recordTextBox.TabStop = false;
             this.recordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.recordTextBox.TextChanged += new System.EventHandler(this.bindingNavigatorCountItem_Click);
             // 
             // previousButton
             // 
@@ -253,7 +252,7 @@
             this.previousButton.TabStop = false;
             this.previousButton.Text = "Previous";
             this.previousButton.UseVisualStyleBackColor = true;
-            this.previousButton.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
             // 
             // lastButton
             // 
@@ -264,7 +263,7 @@
             this.lastButton.TabStop = false;
             this.lastButton.Text = "Last";
             this.lastButton.UseVisualStyleBackColor = true;
-            this.lastButton.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
+            this.lastButton.Click += new System.EventHandler(this.lastButton_Click);
             // 
             // nextButton
             // 
@@ -275,7 +274,7 @@
             this.nextButton.TabStop = false;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // hireDataSet
             // 
@@ -341,7 +340,6 @@
             this.rentalPerDayTextBox.Name = "rentalPerDayTextBox";
             this.rentalPerDayTextBox.Size = new System.Drawing.Size(173, 26);
             this.rentalPerDayTextBox.TabIndex = 4;
-            this.rentalPerDayTextBox.TextChanged += new System.EventHandler(this.rentalPerDayTextBox_TextChanged);
             // 
             // availableCheckBox
             // 
@@ -392,7 +390,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.addButton_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -400,7 +398,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            this.bindingNavigatorCountItem.Click += new System.EventHandler(this.bindingNavigatorCountItem_Click);
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -410,7 +407,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // tmep
             // 
@@ -420,7 +417,7 @@
             this.tmep.RightToLeftAutoMirrorImage = true;
             this.tmep.Size = new System.Drawing.Size(23, 22);
             this.tmep.Text = "Move first";
-            this.tmep.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
+            this.tmep.Click += new System.EventHandler(this.firstButton_Click);
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -430,7 +427,7 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
+            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.previousButton_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -445,7 +442,6 @@
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            this.bindingNavigatorPositionItem.Click += new System.EventHandler(this.bindingNavigatorPositionItem_Click);
             // 
             // bindingNavigatorSeparator1
             // 
@@ -460,7 +456,7 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
-            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
+            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -470,7 +466,7 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
-            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
+            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.lastButton_Click);
             // 
             // bindingNavigatorSeparator2
             // 
@@ -484,7 +480,7 @@
             this.tblCarBindingNavigatorSaveItem.Name = "tblCarBindingNavigatorSaveItem";
             this.tblCarBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.tblCarBindingNavigatorSaveItem.Text = "Save Data";
-            this.tblCarBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblCarBindingNavigatorSaveItem_Click);
+            this.tblCarBindingNavigatorSaveItem.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // frmCars
             // 

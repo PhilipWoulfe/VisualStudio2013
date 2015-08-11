@@ -1,4 +1,7 @@
-﻿using System;
+﻿// XMLsample.cs
+// compile with: /doc:XMLsample.xml
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,26 +16,28 @@ using System.Data.SqlClient;
 
 namespace CarsDatabase
 {
+    /// <summary>
+    /// Main GUI for the carsDatabaase
+    /// </summary>
     public partial class frmCars : Form
     {
 
-        
-        // Create Form
+
+        /// <summary>
+        /// The class constructor
+        /// </summary>
         public frmCars()
         {
             InitializeComponent();
             update();
         }
 
-        
-        // Unused
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        // Save Database
-        private void tblCarBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Update database with current dataset on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void updateButton_Click(object sender, EventArgs e)
         {
             this.Validate();
 
@@ -50,7 +55,11 @@ namespace CarsDatabase
 
         }
 
-        // Fill Form 2
+        /// <summary>
+        /// Populate frmCars on load from dataset
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
            
@@ -60,73 +69,94 @@ namespace CarsDatabase
 
         }
 
-        // Unused
-        private void bindingNavigatorPositionItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // Delete method
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Delete current record on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void deleteButton_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.RemoveCurrent();
             update();
         }
 
-        // Go to first record
-        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Go to first record on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+ 
+        private void firstButton_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MoveFirst();
             update();
             
         }
 
-        // Go to previous record
-        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Go to previous record on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void previousButton_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MovePrevious();
             update();
         }
 
-        // unused method
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // Go to Next Record
-        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Go to Next Record on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nextButton_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MoveNext();
             update();
         }
 
-        // Go to Last Record
-        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Go to Last Record on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lastButton_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MoveLast();
             update();
         }
 
-        // Exit Application
-        private void ExitButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Exits Application on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        // Cancel Method
-        private void CancelButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Cancels current edit on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cancelButton_Click(object sender, EventArgs e)
         {
             this.tblCarBindingSource.CancelEdit();
             update();
         }
 
-        // Add record
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Adds new blank record to database on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void addButton_Click(object sender, EventArgs e)
         {
             try
             {
-
                 this.tblCarBindingSource.AddNew();
             }
             catch (Exception ex)
@@ -137,13 +167,9 @@ namespace CarsDatabase
             update();
         }
 
-        // Unused
-        private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // Method to update the count x of x text box
+        /// <summary>
+        /// Method to update the count x of x text box
+        /// </summary>
         private void update()
         {
             try
@@ -157,22 +183,12 @@ namespace CarsDatabase
 
         }
 
-        // Unused
-        private void rentalPerDayTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         // Open form 2
-        private void button4_Click(object sender, EventArgs e)
+        private void search_Click(object sender, EventArgs e)
         {
             frmSearch form = new frmSearch();
             form.Show();
         }
 
-        private void bindingNavigatorDeleteItem1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
