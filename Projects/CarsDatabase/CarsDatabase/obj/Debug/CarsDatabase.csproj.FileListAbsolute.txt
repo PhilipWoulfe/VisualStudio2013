@@ -21,7 +21,7 @@ C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatab
 C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\bin\Debug\CarsDatabase.exe
 C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\bin\Debug\CarsDatabase.pdb
 C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.csprojResolveAssemblyReference.cache
-C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.Form1.resources
-C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.Form2.resources
 C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.Properties.Resources.resources
 C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.csproj.GenerateResource.Cache
+C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.frmCars.resources
+C:\Users\blue7\Documents\Philip\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.frmSearch.resources

@@ -1,6 +1,6 @@
 ﻿namespace CarsDatabase
 {
-    partial class Form1
+    partial class frmCars
     {
         /// <summary>
         /// Required designer variable.
@@ -35,19 +35,19 @@
             System.Windows.Forms.Label dateRegisteredLabel;
             System.Windows.Forms.Label rentalPerDayLabel;
             System.Windows.Forms.Label availableLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCars));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.firstButton = new System.Windows.Forms.Button();
+            this.recordTextBox = new System.Windows.Forms.TextBox();
+            this.previousButton = new System.Windows.Forms.Button();
+            this.lastButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
             this.hireDataSet = new CarsDatabase.HireDataSet();
             this.tblCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarTableAdapter = new CarsDatabase.HireDataSetTableAdapters.tblCarTableAdapter();
@@ -72,18 +72,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tblCarBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.tblCarBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             vehicleRegNoLabel = new System.Windows.Forms.Label();
             makeLabel = new System.Windows.Forms.Label();
             engineSizeLabel = new System.Windows.Forms.Label();
@@ -95,8 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingNavigator)).BeginInit();
             this.tblCarBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // vehicleRegNoLabel
@@ -169,45 +155,49 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bowman Car Hire";
             // 
-            // button1
+            // updateButton
             // 
-            this.button1.Location = new System.Drawing.Point(465, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 39);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "&Update";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.tblCarBindingNavigatorSaveItem_Click);
+            this.updateButton.Location = new System.Drawing.Point(465, 87);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(85, 39);
+            this.updateButton.TabIndex = 13;
+            this.updateButton.TabStop = false;
+            this.updateButton.Text = "&Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.tblCarBindingNavigatorSaveItem_Click);
             // 
-            // button2
+            // addButton
             // 
-            this.button2.Location = new System.Drawing.Point(465, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 39);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "&Add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.addButton.Location = new System.Drawing.Point(465, 130);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(85, 39);
+            this.addButton.TabIndex = 14;
+            this.addButton.TabStop = false;
+            this.addButton.Text = "&Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
-            // button3
+            // deleteButton
             // 
-            this.button3.Location = new System.Drawing.Point(465, 173);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 39);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "&Delete";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            this.deleteButton.Location = new System.Drawing.Point(465, 173);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(85, 39);
+            this.deleteButton.TabIndex = 15;
+            this.deleteButton.TabStop = false;
+            this.deleteButton.Text = "&Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
-            // button4
+            // searchButton
             // 
-            this.button4.Location = new System.Drawing.Point(465, 216);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 39);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "&Search";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.searchButton.Location = new System.Drawing.Point(465, 216);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(85, 39);
+            this.searchButton.TabIndex = 16;
+            this.searchButton.TabStop = false;
+            this.searchButton.Text = "&Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.button4_Click);
             // 
             // CancelButton
             // 
@@ -215,6 +205,7 @@
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(85, 39);
             this.CancelButton.TabIndex = 17;
+            this.CancelButton.TabStop = false;
             this.CancelButton.Text = "&Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -225,58 +216,66 @@
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(85, 39);
             this.ExitButton.TabIndex = 18;
+            this.ExitButton.TabStop = false;
             this.ExitButton.Text = "E&xit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // bindingNavigatorMoveFirstItem
+            // firstButton
             // 
-            this.bindingNavigatorMoveFirstItem.Location = new System.Drawing.Point(32, 357);
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(76, 39);
-            this.bindingNavigatorMoveFirstItem.TabIndex = 19;
-            this.bindingNavigatorMoveFirstItem.Text = "First";
-            this.bindingNavigatorMoveFirstItem.UseVisualStyleBackColor = true;
-            this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
+            this.firstButton.Location = new System.Drawing.Point(32, 357);
+            this.firstButton.Name = "firstButton";
+            this.firstButton.Size = new System.Drawing.Size(76, 39);
+            this.firstButton.TabIndex = 19;
+            this.firstButton.TabStop = false;
+            this.firstButton.Text = "First";
+            this.firstButton.UseVisualStyleBackColor = true;
+            this.firstButton.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
-            // textBox6
+            // recordTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(196, 367);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(105, 20);
-            this.textBox6.TabIndex = 21;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox6.TextChanged += new System.EventHandler(this.bindingNavigatorCountItem_Click);
+            this.recordTextBox.AcceptsReturn = true;
+            this.recordTextBox.Location = new System.Drawing.Point(196, 367);
+            this.recordTextBox.Name = "recordTextBox";
+            this.recordTextBox.ReadOnly = true;
+            this.recordTextBox.Size = new System.Drawing.Size(105, 20);
+            this.recordTextBox.TabIndex = 21;
+            this.recordTextBox.TabStop = false;
+            this.recordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.recordTextBox.TextChanged += new System.EventHandler(this.bindingNavigatorCountItem_Click);
             // 
-            // button8
+            // previousButton
             // 
-            this.button8.Location = new System.Drawing.Point(114, 357);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(76, 39);
-            this.button8.TabIndex = 22;
-            this.button8.Text = "Previous";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
+            this.previousButton.Location = new System.Drawing.Point(114, 357);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(76, 39);
+            this.previousButton.TabIndex = 22;
+            this.previousButton.TabStop = false;
+            this.previousButton.Text = "Previous";
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
-            // button9
+            // lastButton
             // 
-            this.button9.Location = new System.Drawing.Point(389, 357);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(76, 39);
-            this.button9.TabIndex = 24;
-            this.button9.Text = "Last";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
+            this.lastButton.Location = new System.Drawing.Point(389, 357);
+            this.lastButton.Name = "lastButton";
+            this.lastButton.Size = new System.Drawing.Size(76, 39);
+            this.lastButton.TabIndex = 24;
+            this.lastButton.TabStop = false;
+            this.lastButton.Text = "Last";
+            this.lastButton.UseVisualStyleBackColor = true;
+            this.lastButton.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
             // 
-            // button10
+            // nextButton
             // 
-            this.button10.Location = new System.Drawing.Point(307, 357);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(76, 39);
-            this.button10.TabIndex = 23;
-            this.button10.Text = "Next";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
+            this.nextButton.Location = new System.Drawing.Point(307, 357);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(76, 39);
+            this.nextButton.TabIndex = 23;
+            this.nextButton.TabStop = false;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // hireDataSet
             // 
@@ -305,7 +304,7 @@
             this.vehicleRegNoTextBox.Location = new System.Drawing.Point(221, 101);
             this.vehicleRegNoTextBox.Name = "vehicleRegNoTextBox";
             this.vehicleRegNoTextBox.Size = new System.Drawing.Size(173, 26);
-            this.vehicleRegNoTextBox.TabIndex = 26;
+            this.vehicleRegNoTextBox.TabIndex = 0;
             // 
             // makeTextBox
             // 
@@ -314,7 +313,7 @@
             this.makeTextBox.Location = new System.Drawing.Point(221, 137);
             this.makeTextBox.Name = "makeTextBox";
             this.makeTextBox.Size = new System.Drawing.Size(173, 26);
-            this.makeTextBox.TabIndex = 28;
+            this.makeTextBox.TabIndex = 1;
             // 
             // engineSizeTextBox
             // 
@@ -323,7 +322,7 @@
             this.engineSizeTextBox.Location = new System.Drawing.Point(221, 173);
             this.engineSizeTextBox.Name = "engineSizeTextBox";
             this.engineSizeTextBox.Size = new System.Drawing.Size(173, 26);
-            this.engineSizeTextBox.TabIndex = 30;
+            this.engineSizeTextBox.TabIndex = 2;
             // 
             // dateRegisteredTextBox
             // 
@@ -332,7 +331,7 @@
             this.dateRegisteredTextBox.Location = new System.Drawing.Point(221, 209);
             this.dateRegisteredTextBox.Name = "dateRegisteredTextBox";
             this.dateRegisteredTextBox.Size = new System.Drawing.Size(173, 26);
-            this.dateRegisteredTextBox.TabIndex = 32;
+            this.dateRegisteredTextBox.TabIndex = 3;
             // 
             // rentalPerDayTextBox
             // 
@@ -341,7 +340,7 @@
             this.rentalPerDayTextBox.Location = new System.Drawing.Point(221, 245);
             this.rentalPerDayTextBox.Name = "rentalPerDayTextBox";
             this.rentalPerDayTextBox.Size = new System.Drawing.Size(173, 26);
-            this.rentalPerDayTextBox.TabIndex = 34;
+            this.rentalPerDayTextBox.TabIndex = 4;
             this.rentalPerDayTextBox.TextChanged += new System.EventHandler(this.rentalPerDayTextBox_TextChanged);
             // 
             // availableCheckBox
@@ -351,7 +350,7 @@
             this.availableCheckBox.Location = new System.Drawing.Point(221, 281);
             this.availableCheckBox.Name = "availableCheckBox";
             this.availableCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.availableCheckBox.TabIndex = 36;
+            this.availableCheckBox.TabIndex = 5;
             this.availableCheckBox.UseVisualStyleBackColor = true;
             // 
             // tblCarBindingNavigator
@@ -487,127 +486,12 @@
             this.tblCarBindingNavigatorSaveItem.Text = "Save Data";
             this.tblCarBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblCarBindingNavigatorSaveItem_Click);
             // 
-            // bindingNavigator1
-            // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem1;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem1;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem1;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem1,
-            this.bindingNavigatorMovePreviousItem1,
-            this.bindingNavigatorSeparator3,
-            this.bindingNavigatorPositionItem1,
-            this.bindingNavigatorCountItem1,
-            this.bindingNavigatorSeparator4,
-            this.bindingNavigatorMoveNextItem1,
-            this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5,
-            this.bindingNavigatorAddNewItem1,
-            this.bindingNavigatorDeleteItem1});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem1;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem1;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(574, 25);
-            this.bindingNavigator1.TabIndex = 37;
-            this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem1
-            // 
-            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
-            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem1
-            // 
-            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
-            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator3
-            // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem1
-            // 
-            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem1.Text = "0";
-            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem1
-            // 
-            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem1.Text = "of {0}";
-            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator4
-            // 
-            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem1
-            // 
-            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
-            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem1.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem1
-            // 
-            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
-            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem1.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator5
-            // 
-            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem1
-            // 
-            this.bindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
-            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem1.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem1
-            // 
-            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
-            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem1.Text = "Delete";
-            this.bindingNavigatorDeleteItem1.Click += new System.EventHandler(this.bindingNavigatorDeleteItem1_Click);
-            // 
-            // Form1
+            // frmCars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(574, 416);
-            this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(vehicleRegNoLabel);
             this.Controls.Add(this.vehicleRegNoTextBox);
             this.Controls.Add(makeLabel);
@@ -621,19 +505,19 @@
             this.Controls.Add(availableLabel);
             this.Controls.Add(this.availableCheckBox);
             this.Controls.Add(this.tblCarBindingNavigator);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.bindingNavigatorMoveFirstItem);
+            this.Controls.Add(this.lastButton);
+            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.previousButton);
+            this.Controls.Add(this.recordTextBox);
+            this.Controls.Add(this.firstButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "frmCars";
             this.Text = "Task A Philip Woulfe 2015/08/04";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).EndInit();
@@ -642,9 +526,6 @@
             this.tblCarBindingNavigator.ResumeLayout(false);
             this.tblCarBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,17 +534,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button firstButton;
+        private System.Windows.Forms.TextBox recordTextBox;
+        private System.Windows.Forms.Button previousButton;
+        private System.Windows.Forms.Button lastButton;
+        private System.Windows.Forms.Button nextButton;
         private HireDataSet hireDataSet;
         private System.Windows.Forms.BindingSource tblCarBindingSource;
         private HireDataSetTableAdapters.tblCarTableAdapter tblCarTableAdapter;
@@ -689,18 +570,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton tblCarBindingNavigatorSaveItem;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem1;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
     }
 }
 

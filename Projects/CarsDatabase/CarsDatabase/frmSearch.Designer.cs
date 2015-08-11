@@ -1,6 +1,6 @@
 ﻿namespace CarsDatabase
 {
-    partial class Form2
+    partial class frmSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -102,6 +102,7 @@
             // 
             // operatorComboBox
             // 
+            this.operatorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.operatorComboBox.FormattingEnabled = true;
             this.operatorComboBox.Location = new System.Drawing.Point(185, 55);
             this.operatorComboBox.Name = "operatorComboBox";
@@ -110,11 +111,13 @@
             // 
             // fieldComboBox
             // 
+            this.fieldComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fieldComboBox.FormattingEnabled = true;
             this.fieldComboBox.Location = new System.Drawing.Point(25, 55);
             this.fieldComboBox.Name = "fieldComboBox";
             this.fieldComboBox.Size = new System.Drawing.Size(121, 21);
             this.fieldComboBox.TabIndex = 0;
+            this.fieldComboBox.SelectedIndexChanged += new System.EventHandler(this.fieldComboBox_SelectedIndexChanged);
             // 
             // tblCarBindingSource
             // 
@@ -169,7 +172,7 @@
             this.tblCarBindingSource1.DataMember = "tblCar";
             this.tblCarBindingSource1.DataSource = this.hireDataSet;
             // 
-            // Form2
+            // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,7 +181,7 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.runButton);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
+            this.Name = "frmSearch";
             this.Text = "  Task A Search";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);

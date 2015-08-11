@@ -13,57 +13,29 @@ using System.Data.SqlClient;
 
 namespace CarsDatabase
 {
-    public partial class Form1 : Form
+    public partial class frmCars : Form
     {
 
         
-
-        public Form1()
+        // Create Form
+        public frmCars()
         {
             InitializeComponent();
             update();
         }
 
         
-
+        // Unused
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             
         }
 
+        // Save Database
         private void tblCarBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
 
-            //// Create a new row.
-            //HireDataSet.tblCarRow newtblCarRow;
-
-            //try
-            //{
-
-            //    newtblCarRow = hireDataSet.tblCar.NewtblCarRow();
-            //    newtblCarRow.VehicleRegNo = vehicleRegNoTextBox.ToString(); ;
-            //    newtblCarRow.Make = makeTextBox.ToString();
-            //    newtblCarRow.EngineSize = engineSizeTextBox.ToString();
-            //    MessageBox.Show(dateRegisteredTextBox.ToString());
-            //    newtblCarRow.DateRegistered = DateTime.ParseExact(dateRegisteredTextBox.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture); ;
-            //    newtblCarRow.RentalPerDay = (decimal)(int.Parse(rentalPerDayTextBox.ToString().Substring(rentalPerDayTextBox.ToString().IndexOf("£"))));
-            //    newtblCarRow.Available = bool.Parse(availableCheckBox.ToString());
-
-            //    // Add the row to the Region table 
-            //    this.hireDataSet.tblCar.Rows.Add(newtblCarRow);
-
-            //    // Save the new row to the database 
-            //    this.tblCarTableAdapter.Update(this.hireDataSet.tblCar);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.ToString(), "Error");
-            //}
-
-            
-            
-            
             try
             {
                 this.tblCarBindingSource.EndEdit();
@@ -71,13 +43,14 @@ namespace CarsDatabase
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error");
+                MessageBox.Show(ex.Message, "Error");
             }
             
             update();
 
         }
 
+        // Fill Form 2
         private void Form1_Load(object sender, EventArgs e)
         {
            
@@ -87,17 +60,20 @@ namespace CarsDatabase
 
         }
 
+        // Unused
         private void bindingNavigatorPositionItem_Click(object sender, EventArgs e)
         {
 
         }
 
+        // Delete method
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.RemoveCurrent();
             update();
         }
 
+        // Go to first record
         private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MoveFirst();
@@ -105,6 +81,7 @@ namespace CarsDatabase
             
         }
 
+        // Go to previous record
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MovePrevious();
@@ -117,29 +94,34 @@ namespace CarsDatabase
 
         }
 
+        // Go to Next Record
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MoveNext();
             update();
         }
 
+        // Go to Last Record
         private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
         {
             tblCarBindingSource.MoveLast();
             update();
         }
 
+        // Exit Application
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Cancel Method
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.tblCarBindingSource.CancelEdit();
             update();
         }
 
+        // Add record
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             try
@@ -149,48 +131,42 @@ namespace CarsDatabase
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
 
             update();
         }
 
+        // Unused
         private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
         {
 
         }
 
+        // Method to update the count x of x text box
         private void update()
         {
             try
             {
-                textBox6.Text = bindingNavigatorPositionItem.Text + " " + bindingNavigatorCountItem.Text.ToString();
+                recordTextBox.Text = bindingNavigatorPositionItem.Text + " " + bindingNavigatorCountItem.Text.ToString();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
 
-            
-            //if (!rentalPerDayTextBox.Text.StartsWith("£"))
-            //{
-            //    rentalPerDayTextBox.Text = "£" + rentalPerDayTextBox.Text;
-            //}
-            
-            
         }
 
+        // Unused
         private void rentalPerDayTextBox_TextChanged(object sender, EventArgs e)
         {
 
-
-
-
         }
 
+        // Open form 2
         private void button4_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            frmSearch form = new frmSearch();
             form.Show();
         }
 
