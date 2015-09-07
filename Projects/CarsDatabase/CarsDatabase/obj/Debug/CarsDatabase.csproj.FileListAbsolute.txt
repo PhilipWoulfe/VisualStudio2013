@@ -37,3 +37,15 @@ E:\DropBox\Dropbox\Development\VisualStudio2013\VisualStudio2013\Projects\CarsDa
 E:\DropBox\Dropbox\Development\VisualStudio2013\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.frmSearch.resources
 E:\DropBox\Dropbox\Development\VisualStudio2013\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.Properties.Resources.resources
 E:\DropBox\Dropbox\Development\VisualStudio2013\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.csproj.GenerateResource.Cache
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\bin\Debug\CarsDatabase.exe.config
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.exe
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.pdb
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\bin\Debug\Hire.mdf
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\bin\Debug\Hire_log.ldf
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\bin\Debug\CarsDatabase.exe
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\bin\Debug\CarsDatabase.pdb
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.csprojResolveAssemblyReference.cache
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.frmCars.resources
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.frmSearch.resources
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.Properties.Resources.resources
+E:\DropBox\Dropbox\Development\VisualStudio2013\Projects\CarsDatabase\CarsDatabase\obj\Debug\CarsDatabase.csproj.GenerateResource.Cache

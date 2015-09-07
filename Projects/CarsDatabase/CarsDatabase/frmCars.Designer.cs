@@ -72,6 +72,10 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tblCarBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.tblCarBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             vehicleRegNoLabel = new System.Windows.Forms.Label();
             makeLabel = new System.Windows.Forms.Label();
             engineSizeLabel = new System.Windows.Forms.Label();
@@ -301,27 +305,33 @@
             this.vehicleRegNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblCarBindingSource, "VehicleRegNo", true));
             this.vehicleRegNoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.vehicleRegNoTextBox.Location = new System.Drawing.Point(221, 101);
+            this.vehicleRegNoTextBox.MaxLength = 10;
             this.vehicleRegNoTextBox.Name = "vehicleRegNoTextBox";
             this.vehicleRegNoTextBox.Size = new System.Drawing.Size(173, 26);
             this.vehicleRegNoTextBox.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.vehicleRegNoTextBox, "Enter the Registration of the Car");
             // 
             // makeTextBox
             // 
             this.makeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblCarBindingSource, "Make", true));
             this.makeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.makeTextBox.Location = new System.Drawing.Point(221, 137);
+            this.makeTextBox.MaxLength = 50;
             this.makeTextBox.Name = "makeTextBox";
             this.makeTextBox.Size = new System.Drawing.Size(173, 26);
             this.makeTextBox.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.makeTextBox, "Enter the Make of the Car");
             // 
             // engineSizeTextBox
             // 
             this.engineSizeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblCarBindingSource, "EngineSize", true));
             this.engineSizeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.engineSizeTextBox.Location = new System.Drawing.Point(221, 173);
+            this.engineSizeTextBox.MaxLength = 10;
             this.engineSizeTextBox.Name = "engineSizeTextBox";
             this.engineSizeTextBox.Size = new System.Drawing.Size(173, 26);
             this.engineSizeTextBox.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.engineSizeTextBox, "Enter the Engine size of the Car");
             // 
             // dateRegisteredTextBox
             // 
@@ -331,6 +341,7 @@
             this.dateRegisteredTextBox.Name = "dateRegisteredTextBox";
             this.dateRegisteredTextBox.Size = new System.Drawing.Size(173, 26);
             this.dateRegisteredTextBox.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.dateRegisteredTextBox, "Enter the Date the car was Registered");
             // 
             // rentalPerDayTextBox
             // 
@@ -340,6 +351,7 @@
             this.rentalPerDayTextBox.Name = "rentalPerDayTextBox";
             this.rentalPerDayTextBox.Size = new System.Drawing.Size(173, 26);
             this.rentalPerDayTextBox.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.rentalPerDayTextBox, "Enter the rental cost per day");
             // 
             // availableCheckBox
             // 
@@ -349,6 +361,7 @@
             this.availableCheckBox.Name = "availableCheckBox";
             this.availableCheckBox.Size = new System.Drawing.Size(104, 24);
             this.availableCheckBox.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.availableCheckBox, "Is the car available?");
             this.availableCheckBox.UseVisualStyleBackColor = true;
             // 
             // tblCarBindingNavigator
@@ -514,7 +527,7 @@
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.label1);
             this.Name = "frmCars";
-            this.Text = "Task A Philip Woulfe 2015/08/04";
+            this.Text = "Task A Philip Woulfe 2015/08/20";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource)).EndInit();
@@ -566,6 +579,10 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton tblCarBindingNavigatorSaveItem;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
     }
 }
 

@@ -180,7 +180,7 @@
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmSearch";
-            this.Text = "  Task A Search";
+            this.Text = "  Task A Search Philip Woulfe 2015/08/20";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

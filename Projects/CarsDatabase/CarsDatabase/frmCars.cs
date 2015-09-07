@@ -43,14 +43,18 @@ namespace CarsDatabase
 
             try
             {
+                // end edit
                 this.tblCarBindingSource.EndEdit();
+                
+                // update database
                 this.tableAdapterManager.UpdateAll(this.hireDataSet);
             }
             catch (Exception ex)
             {
+                // show error
                 MessageBox.Show(ex.Message, "Error");
             }
-            
+            // update record box
             update();
 
         }
@@ -65,6 +69,7 @@ namespace CarsDatabase
            
             // TODO: This line of code loads data into the 'hireDataSet.tblCar' table. You can move, or remove it, as needed.
             this.tblCarTableAdapter.Fill(this.hireDataSet.tblCar);
+            // update record box
             update();
 
         }
@@ -76,7 +81,9 @@ namespace CarsDatabase
         /// <param name="e"></param>
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            // delete current record
             tblCarBindingSource.RemoveCurrent();
+            // update record box
             update();
         }
 
@@ -85,10 +92,11 @@ namespace CarsDatabase
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
- 
         private void firstButton_Click(object sender, EventArgs e)
         {
+            // go to first record
             tblCarBindingSource.MoveFirst();
+            // update record box
             update();
             
         }
@@ -100,7 +108,9 @@ namespace CarsDatabase
         /// <param name="e"></param>
         private void previousButton_Click(object sender, EventArgs e)
         {
+            // go to previous record
             tblCarBindingSource.MovePrevious();
+            // update record box
             update();
         }
 
@@ -111,7 +121,9 @@ namespace CarsDatabase
         /// <param name="e"></param>
         private void nextButton_Click(object sender, EventArgs e)
         {
+            // go to next record
             tblCarBindingSource.MoveNext();
+            // update record box
             update();
         }
 
@@ -122,7 +134,9 @@ namespace CarsDatabase
         /// <param name="e"></param>
         private void lastButton_Click(object sender, EventArgs e)
         {
+            // go to last record
             tblCarBindingSource.MoveLast();
+            // update record box
             update();
         }
 
@@ -133,6 +147,7 @@ namespace CarsDatabase
         /// <param name="e"></param>
         private void exitButton_Click(object sender, EventArgs e)
         {
+            // exit program
             this.Close();
         }
 
@@ -143,6 +158,7 @@ namespace CarsDatabase
         /// <param name="e"></param>
         private void cancelButton_Click(object sender, EventArgs e)
         {
+            // cancel update
             this.tblCarBindingSource.CancelEdit();
             update();
         }
@@ -157,10 +173,12 @@ namespace CarsDatabase
         {
             try
             {
+                // add new record
                 this.tblCarBindingSource.AddNew();
             }
             catch (Exception ex)
             {
+                // show error
                 MessageBox.Show(ex.Message);
             }
 
@@ -174,19 +192,27 @@ namespace CarsDatabase
         {
             try
             {
+                // update record box
                 recordTextBox.Text = bindingNavigatorPositionItem.Text + " " + bindingNavigatorCountItem.Text.ToString();
             }
             catch (Exception ex)
             {
+                // show error
                 MessageBox.Show(ex.Message);
             }
 
         }
 
-        // Open form 2
+        /// <summary>
+        /// Method to open frmSearch on click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void search_Click(object sender, EventArgs e)
         {
+            // open new form
             frmSearch form = new frmSearch();
+            // display form
             form.Show();
         }
 
